@@ -26,7 +26,7 @@ ax.set_ylabel("elapsed seconds (2 CPU-s job)"); ax.set_title("Exp 1: native vs c
 # Exp 1b: startup latency
 d = rows("exp1_startup.csv")
 vals = [[float(r["startup_ms"]) for r in d if r["mode"] == m] for m in modes]
-fig, ax = plt.subplots(figsize=(4, 3.2)); ax.boxplot(vals, labels=modes)
+fig, ax = plt.subplots(figsize=(4, 3.2)); ax.boxplot(vals, tick_labels=modes)
 ax.set_ylabel("ms to run /bin/true"); ax.set_title("Exp 1: startup latency"); save(fig, "exp1_startup.png")
 
 # Exp 2: CPU quota
