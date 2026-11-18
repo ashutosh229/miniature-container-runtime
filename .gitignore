@@ -1,0 +1,6 @@
+build/
+results/
+rootfs/*
+!rootfs/.gitkeep
+*.o
+.vscode/
